@@ -5,7 +5,7 @@ Home: https://pypi.org/project/rarfile/
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: RAR archive reader for Python
 
