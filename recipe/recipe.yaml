@@ -1,54 +1,36 @@
 context:
-  name: "rarfile"
-  version: "4.2"
-
+  version: '4.2'
 
 package:
-  name: ${{ name|lower }}
+  name: rarfile
   version: ${{ version }}
 
-
 source:
-  url: https://pypi.io/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 8e1c8e72d0845ad2b32a47ab11a719bc2e41165ec101fd4d3fe9e92aa3f469ef
-
+  - url: https://pypi.org/packages/source/r/rarfile/rarfile-${{ version }}.tar.gz
+    sha256: 8e1c8e72d0845ad2b32a47ab11a719bc2e41165ec101fd4d3fe9e92aa3f469ef
 
 build:
-  number: 0
-  noarch: python
-  script: ${{ PYTHON }} -m pip install . -vv
-
+  script: ${{ PYTHON }} -m pip install .
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python
-    - setuptools
   run:
-    - python
-
+    - python >=3.6
 
 tests:
   - python:
       imports:
         - rarfile
-
-  - script:
-      - pip check
-
-    requirements:
-      run:
-        - pip
-
+      pip_check: true
 
 about:
-  homepage: https://pypi.org/project/rarfile/
+  homepage: https://github.com/markokr/rarfile
   summary: RAR archive reader for Python
-  license: MIT
-  license_file: LICENSE
+  description: |-
+    rarfile - RAR archive reader for Python
+    =======================================
 
-
-extra:
-  recipe-maintainers:
-    - marcelotrevisani
-    - ShalokShalom
+    This is a Python module for RAR_ archive reading. The interface follows the style of zipfile_. Licensed under ISC_ license....
+  license: ISC
