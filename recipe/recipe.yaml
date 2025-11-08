@@ -28,10 +28,6 @@ tests:
         - rarfile
       pip_check: true
 
-extra:
-  recipe-maintainers:
-    - ShalokShalom
-
 about:
   homepage: https://github.com/markokr/rarfile
   summary: RAR archive reader for Python
@@ -42,3 +38,7 @@ about:
     This is a Python module for RAR_ archive reading. The interface follows the style of zipfile_. Licensed under ISC_ license....
   license: ISC
   license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - ShalokShalom
