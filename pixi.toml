@@ -1,0 +1,11 @@
+[workspace]
+authors = ["ShalokShalom <shalokshalom@protonmail.ch>"]
+channels = ["conda-forge"]
+name = "rarfile-feedstock"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+friendly = ">=0.7.21,<0.8"
