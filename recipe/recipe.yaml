@@ -1,5 +1,5 @@
 context:
-  version: 4.2
+  version: "4.4"
 
 package:
   name: rarfile
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/r/rarfile/rarfile-${{ version }}.tar.gz
-    sha256: 8e1c8e72d0845ad2b32a47ab11a719bc2e41165ec101fd4d3fe9e92aa3f469ef
+    sha256: b7d29d671223cdc80e8b992df212d152ad88e6c961d4426c3fb2fefe8dd86fdf
 
 build:
   script: ${{ PYTHON }} -m pip install .
